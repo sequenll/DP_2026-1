@@ -1,9 +1,9 @@
 package practice.ch01;
 
-// import java.util.Iterator;
+import java.util.Iterator;
 
-// public class BookShelf implements Iterable<Book> {
-    public class BookShelf {
+public class BookShelf implements Iterable<Book> {
+//  public class BookShelf {
     private Book[] books;
     private int last = 0;
 
@@ -23,11 +23,9 @@ package practice.ch01;
     public int getLength() {
         return last;
     }
-    }
-/*
+
     @Override
     public Iterator<Book> iterator() {
-        return new BookShelfIterator(this);
+        return new BookShelfIterator(this); // 인자를 현재 책꽃이 저신으로 넘겨줌
     }
-    }
-*/
+}
