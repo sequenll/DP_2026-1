@@ -3,22 +3,27 @@ package hw.ch01;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class BookShelfIterator implements Iterator<Book> {
+public class GenreIterator implements Iterator<Book> {
     private BookShelf bookShelf;
+    private String genre;
     private int index;
 
-    public BookShelfIterator(BookShelf bookShelf) {
+    public GenreIterator(BookShelf bookShelf, String genre) {
         this.bookShelf = bookShelf;
+        this.genre = genre;
         this.index = 0;
     }
 
     @Override
     public boolean hasNext() {
-        if (index < bookShelf.getLength()) {
-            return true;
-        } else {
-            return false;
+        while (index < bookShelf.getLength()) {
+            Book book = bookShelf.getBookAt(index);
+            if (book.getGenre() != null && book.getGenre().equals(genre)) {
+                return true;
+            }
+            index++;
         }
+        return false;
     }
 
     @Override

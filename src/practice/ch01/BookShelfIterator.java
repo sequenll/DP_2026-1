@@ -10,7 +10,7 @@ public class BookShelfIterator implements Iterator<Book> {
     public BookShelfIterator(BookShelf bookShelf) {
         this.bookShelf = bookShelf; // 자기가 돌아다닐 책꽃이를 저장하는 필드
         this.index = 0;
-    }
+    }            
 
     @Override
     public boolean hasNext() { // 다음 책이 있는지 여부를 반환하는 메서드
