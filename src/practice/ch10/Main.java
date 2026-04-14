@@ -14,11 +14,11 @@ public class Main {
         // }
 
         // 플레이어 2명 생성
-        Player player1 = new Player("전민서", new WinningStrategy(314));
+        Player player1 = new Player("전민서", new ProbStrategy(314)); // 하드코드 되었음
         Player player2 = new Player("홍길동", new WinningStrategy(15));
 
         // 게임 시키기
-        for (int i=0; i< 10; i++) {
+        for (int i=0; i< 1000; i++) {
             Hand h1 = player1.nextHand();
             Hand h2 = player2.nextHand();
 
@@ -36,5 +36,9 @@ public class Main {
                 player2.even();
             }
         }
+
+            System.out.println("Total result:");
+            System.out.println(player1);
+            System.out.println(player2);
     }
 }
