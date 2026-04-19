@@ -7,9 +7,17 @@ public class Main {
         Directory bindir = new Directory("bin");
         Directory tmpdir = new Directory("tmp");
         Directory usrdir = new Directory("usr");
+        Directory jms = new Directory("jms");
+       
         rootdir.add(bindir);
         rootdir.add(tmpdir);
         rootdir.add(usrdir);
+        rootdir.add(jms);
+
+        jms.add(new File("jms1", 100));
+        jms.add(new File("jms2", 200));
+        jms.add(new File("jms3", 300));
+       
         bindir.add(new File("vi", 10000));
         bindir.add(new File("latex", 20000));
         rootdir.printList();
@@ -19,9 +27,11 @@ public class Main {
         Directory youngjin = new Directory("youngjin");
         Directory gildong = new Directory("gildong");
         Directory dojun = new Directory("dojun");
+    
         usrdir.add(youngjin);
         usrdir.add(gildong);
         usrdir.add(dojun);
+        
         youngjin.add(new File("diary.html", 100));
         youngjin.add(new File("Composite.java", 200));
         gildong.add(new File("memo.tex", 300));
