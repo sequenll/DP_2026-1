@@ -35,7 +35,7 @@ public class Directory extends Entry {
 
     // 디렉터리 엔트리를 디렉터리에 추가한다
     public Entry add(Entry entry) {
-        directory.add(entry);
+        directory.add(entry); 
         return this;
     }
 }
