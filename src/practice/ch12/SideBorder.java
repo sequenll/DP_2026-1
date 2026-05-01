@@ -14,13 +14,13 @@ public class SideBorder extends Border {
     @Override
     public int getColumns() {
         // 문자 수는 내용물의 양쪽에 장식 문자만큼 더한 것
-        return 1 + display.getColumns() + 1;
+        return 1 + display.getColumns() + 1; // 위임
     }
 
     @Override
     public int getRows() {
         // 행수는 내용물의 행수와 같다 
-        return display.getRows();
+        return display.getRows(); // 위임
     }
 
     @Override

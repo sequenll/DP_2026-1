@@ -7,12 +7,12 @@ public class MultiStringDisplay extends Display {
     // 표시 문자열 저장 장소
     private List<String> body = new ArrayList<>();
     // 표시 문자열 최대 문자 수 
-    private int columns = 0;
+    private int columns = 0; // 현재 촤대 문자 수
 
     // 문자열 추가 
     public void add(String msg) {
         body.add(msg);
-        if (columns < msg.length()) {
+        if (columns < msg.length()) { // 입력으로 들어온 문자열이 현재 최대 문자 수보다 길면
             // 최대 문자 수 갱신
             columns = msg.length();
         }
@@ -38,7 +38,7 @@ public class MultiStringDisplay extends Display {
     private void updatePadding() {
         for (int row = 0; row < body.size(); row++) {
             String line = body.get(row);
-            int padding = columns - line.length();
+            int padding = columns - line.length(); // 채워야 할 빈 칸 수
             if (padding > 0) {
                 body.set(row, line + spaces(padding));
             }
