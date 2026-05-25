@@ -1,4 +1,3 @@
-
 package hw.ch19;
 
 public interface State {
