@@ -1,3 +1,4 @@
+
 package hw.ch19;
 
 public class NightState implements State {

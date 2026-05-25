@@ -39,5 +39,4 @@ public class ClosingState implements State {
     public String toString() {
         return "[마감]";
     }
-
 }
