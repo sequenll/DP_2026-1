@@ -11,6 +11,7 @@ public class HtmlWriter {
     }
 
     // 타이틀 출력 
+    // 제일 먼저 호출되어야 하는 메소드
     public void title(String title) throws IOException {
         writer.write("<!DOCTYPE html>");
         writer.write("<html>");
@@ -31,6 +32,7 @@ public class HtmlWriter {
 
     // 링크 출력
     public void link(String href, String caption) throws IOException {
+        // <a href="http://www.aozora.gr.jp/">...</a>
         paragraph("<a href=\"" + href + "\">" + caption + "</a>");
     }
 

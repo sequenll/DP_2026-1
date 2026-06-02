@@ -19,11 +19,11 @@ public abstract class Support {
     public void support(Trouble trouble) {
         for (Support obj = this; true; obj = obj.next) {
             if (obj.resolve(trouble)) {
-                obj.done(trouble);
-                break;
+                obj.done(trouble); // 성공
+                break; // 루프를 빠져나감
             } else if (obj.next == null) {
-                obj.fail(trouble);
-                break;
+                obj.fail(trouble); // 실패
+                break; // 루프를 빠져나감
             }
         }
     }
