@@ -1,4 +1,4 @@
-package ch21.Sample;
+package practice.ch21;
 
 public interface Printable {
     public abstract void setPrinterName(String name);		// 이름 설정 

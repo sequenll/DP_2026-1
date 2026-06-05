@@ -17,6 +17,7 @@ public class PageMaker {
 
             HtmlWriter writer = new HtmlWriter(new FileWriter(filename));
             
+            // 웰컴페이지를 작성하는 부분
             writer.title(username + "'s web page");
             writer.paragraph("Welcome to " + username + "'s web page!");
             writer.paragraph("Nice to meet you!");
